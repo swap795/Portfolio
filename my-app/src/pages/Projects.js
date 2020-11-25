@@ -36,14 +36,39 @@ const Movie = styled.div`
    }
 `;
 
+const Frame1 = styled(motion.div)`
+   background: #fffebf;
+   position: fixed;
+   left: 0;
+   top: 10%;
+   width: 100%;
+   height: 100vh;
+   z-index: 2;
+`;
+const Frame2 = styled(Frame1)`
+   background: #ff8efb;
+`;
+const Frame3 = styled(Frame1)`
+   background: #8ed2ff;
+`;
+const Frame4 = styled(Frame1)`
+   background: #8effa0;
+`;
 
+
+/************************************************************ 
+   MAIN RENDER
+************************************************************/
 const Projects = () => {
    return (
       <motion.div 
+         exit="exit" 
          variants={ pageAnimation } 
          initial="hidden" 
          animate="show"
-         exit="exit" 
+         style={{
+            background: "#b1c1bb"
+         }}
       >
          <ProjectsStyle>
             <Movie>

@@ -10,9 +10,9 @@ export const pageAnimation = {
       opacity: 1,
       y: 0,
       transition: {
-         duration: .75,
+         duration: .4,
          when: "beforeChildren",
-         staggerChildren: 0.25,            
+         staggerChildren: 0.2,            
          // staggerChildren will apply this animation to all the other children tags but need to define it in the parent tag
       },
    },
