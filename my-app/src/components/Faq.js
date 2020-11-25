@@ -2,6 +2,9 @@ import React from "react";
 import styled from 'styled-components';
 import { AboutStyle } from '../styles';
 
+import { motion } from 'framer-motion';
+import { pageAnimation } from '../animation';
+
 const FaqStyle = styled(AboutStyle)`
    display: block;
    span{
@@ -22,6 +25,12 @@ const FaqStyle = styled(AboutStyle)`
 
 const Faq = () => {
    return (
+   <motion.div 
+      variants={ pageAnimation } 
+      initial="hidden" 
+      animate="show"
+      exit="exit"
+   >
       <FaqStyle>
          <h2>Any Questions? <span>FAQ</span></h2>
          <div className="faq-line"></div>
@@ -31,6 +40,7 @@ const Faq = () => {
             <button>Submit</button>
          </div>
       </FaqStyle>
+   </motion.div>
    );
 }
 
