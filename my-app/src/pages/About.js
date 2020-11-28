@@ -2,7 +2,9 @@ import React from "react";
 import { motion } from 'framer-motion';
 import { pageAnimation } from '../animation';
 
-const AboutMe = () => {
+import AboutMe from '../components/AboutMe';
+
+const About = () => {
    return (
       <motion.div 
       exit="exit" 
@@ -10,9 +12,9 @@ const AboutMe = () => {
       initial="hidden" 
       animate="show"
       >
-         <h1>About Me</h1>
+         <AboutMe />
       </motion.div>
    );
 }
 
-export default AboutMe;
+export default About;

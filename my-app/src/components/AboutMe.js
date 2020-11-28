@@ -1,9 +1,12 @@
 import React from "react";
 
+import { AboutStyle } from '../styles';
+
+
 const About = () => {
    return (
       <div>
-         <h1>About Me</h1>
+         <h2>About ME</h2>
       </div>
    );
 }

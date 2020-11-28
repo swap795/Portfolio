@@ -2,10 +2,9 @@ import React from "react";
 
 import GlobalStyle from './components/GlobalStyle';
 import Home from "./components/Home";
-import Faq from "./components/Faq";
 import Nav from "./components/Nav"
 
-import AboutMe from "./pages/AboutMe";
+import About from "./pages/About";
 import ContactMe from "./pages/ContactMe";
 import Projects from "./pages/Projects";
 
@@ -27,14 +26,13 @@ function App() {
           <Home />
         </Route>
         <Route path="/about" exact>
-          <AboutMe />
+          <About />
         </Route>
         <Route path="/projects">
           <Projects />
         </Route>
         <Route path="/contact">
           <ContactMe />
-          <Faq />
         </Route>
       </Switch>
     </AnimatePresence>

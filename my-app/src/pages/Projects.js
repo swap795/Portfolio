@@ -67,7 +67,7 @@ const Projects = () => {
          initial="hidden" 
          animate="show"
          style={{
-            background: "#b1c1bb"
+            background: "#f1f3f8"
          }}
       >
          <ProjectsStyle>
