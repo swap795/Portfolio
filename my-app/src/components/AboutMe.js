@@ -1,6 +1,6 @@
 import React from "react";
 
-import { AboutStyle } from '../styles';
+// import { AboutStyle } from '../styles';
 
 
 const About = () => {

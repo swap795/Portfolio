@@ -84,7 +84,7 @@ const Projects = () => {
          initial="hidden" 
          animate="show"
          style={{
-            background: "#f1f3f8"
+            background: "#adaaaa"
          }}
       >
          <ProjectsStyle>

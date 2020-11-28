@@ -1,5 +1,6 @@
 import React from "react";
 import pro_pic from "../images/pro-pic.JPEG";
+import About from '../pages/About';
 
 // framer motion
 import { motion } from 'framer-motion';
@@ -17,12 +18,10 @@ import Wave from './Wave';
    MAIN RENDER
 ************************************************************/
 const Home = () => {
-
    /*
    The code below is basically doing this
       <motion.h2 initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 2 } }}>Welcome!</motion.h2>
    */
-
    return (
       <motion.div 
          variants={ pageAnimation } 
@@ -47,6 +46,7 @@ const Home = () => {
             </ImgStyle>
             <Wave />
          </AboutStyle>
+         <About />
       </motion.div>
       
    );
