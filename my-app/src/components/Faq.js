@@ -46,6 +46,7 @@ const Faq = () => {
       <FaqStyle>
          <h2>Any Questions? <span>FAQ</span></h2>
          <div className="faq-line"></div>
+         {/* AnimateSharedLayout notices changes in layout and puts animation accordingly */}
          <AnimateSharedLayout>
             <Toggle title={ "What technologies are used to create this Website?" }>
                <div className="answer">      

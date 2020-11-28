@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { HideStyle } from '../styles'
 
+import ScrollAnimation from "../components/ScrollAnimation";
+
 // images
 import athlete from "../images/athlete-small.png";
 import theracer from "../images/theracer-small.png";
@@ -12,7 +14,7 @@ import goodtimes from "../images/goodtimes-small.png";
 import { motion } from 'framer-motion';
 import { pageAnimation, photoAnimation, fadeAnimation, lineAnimation } from "../animation";
 
-const ProjectsStyle = styled.div`
+const ProjectsStyle = styled(motion.div)`
    min-height: 100vh;
    overflow: hidden;
    padding: 5rem 10rem;
@@ -21,7 +23,7 @@ const ProjectsStyle = styled.div`
    }
 `;
 
-const Movie = styled.div`
+const Movie = styled(motion.div)`
    padding-bottom: 10rem;
    .line{
       height: 0.5rem;
@@ -55,11 +57,26 @@ const Frame4 = styled(Frame1)`
    background: #8effa0;
 `;
 
+const scrollReveal = {
+   hidden: {
+      opacity: 0,
+   },
+   show: {
+      opacity: 1,
+      transition: {
+         duration: 1,
+      }
+   },
+};
 
 /************************************************************ 
    MAIN RENDER
 ************************************************************/
 const Projects = () => {
+   const [element1, controls1] = ScrollAnimation();
+   const [element2, controls2] = ScrollAnimation();
+   const [element3, controls3] = ScrollAnimation();
+   
    return (
       <motion.div 
          exit="exit" 
@@ -71,7 +88,12 @@ const Projects = () => {
          }}
       >
          <ProjectsStyle>
-            <Movie>
+            <Movie 
+               ref={ element1 }
+               variants={ scrollReveal } 
+               initial="hidden" 
+               animate={ controls1 }
+            >
                <motion.h2 variants={ fadeAnimation }>The Athlete</motion.h2>
                <motion.div variants={ lineAnimation } className="line"></motion.div>
                <Link to="/projects/the-athlete">
@@ -80,7 +102,12 @@ const Projects = () => {
                   </HideStyle>
                </Link>
             </Movie>
-            <Movie>
+            <Movie
+               ref={ element2 }
+               variants={ scrollReveal } 
+               initial="hidden" 
+               animate={ controls2 }
+            >
                <motion.h2>The Racer</motion.h2>
                <motion.div variants={ lineAnimation } className="line"></motion.div>
                <Link to="/projects/the-racer">
@@ -89,7 +116,12 @@ const Projects = () => {
                   </HideStyle>
                </Link>
             </Movie>
-            <Movie>
+            <Movie
+               ref={ element3 }
+               variants={ scrollReveal } 
+               initial="hidden" 
+               animate={ controls3 }
+            >
                <motion.h2>Good Times</motion.h2>
                <motion.div variants={ lineAnimation } className="line"></motion.div>
                <Link to="/projects/good-times">
